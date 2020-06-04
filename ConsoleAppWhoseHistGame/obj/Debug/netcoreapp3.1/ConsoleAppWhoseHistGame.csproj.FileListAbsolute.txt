@@ -1,0 +1,13 @@
+C:\Users\afami\source\repos\ConsoleAppWhoseHistGame\bin\Debug\netcoreapp3.1\ConsoleAppWhoseHistGame.exe
+C:\Users\afami\source\repos\ConsoleAppWhoseHistGame\bin\Debug\netcoreapp3.1\ConsoleAppWhoseHistGame.deps.json
+C:\Users\afami\source\repos\ConsoleAppWhoseHistGame\bin\Debug\netcoreapp3.1\ConsoleAppWhoseHistGame.runtimeconfig.json
+C:\Users\afami\source\repos\ConsoleAppWhoseHistGame\bin\Debug\netcoreapp3.1\ConsoleAppWhoseHistGame.runtimeconfig.dev.json
+C:\Users\afami\source\repos\ConsoleAppWhoseHistGame\bin\Debug\netcoreapp3.1\ConsoleAppWhoseHistGame.dll
+C:\Users\afami\source\repos\ConsoleAppWhoseHistGame\bin\Debug\netcoreapp3.1\ConsoleAppWhoseHistGame.pdb
+C:\Users\afami\source\repos\ConsoleAppWhoseHistGame\obj\Debug\netcoreapp3.1\ConsoleAppWhoseHistGame.csprojAssemblyReference.cache
+C:\Users\afami\source\repos\ConsoleAppWhoseHistGame\obj\Debug\netcoreapp3.1\ConsoleAppWhoseHistGame.csproj.CoreCompileInputs.cache
+C:\Users\afami\source\repos\ConsoleAppWhoseHistGame\obj\Debug\netcoreapp3.1\ConsoleAppWhoseHistGame.AssemblyInfoInputs.cache
+C:\Users\afami\source\repos\ConsoleAppWhoseHistGame\obj\Debug\netcoreapp3.1\ConsoleAppWhoseHistGame.AssemblyInfo.cs
+C:\Users\afami\source\repos\ConsoleAppWhoseHistGame\obj\Debug\netcoreapp3.1\ConsoleAppWhoseHistGame.dll
+C:\Users\afami\source\repos\ConsoleAppWhoseHistGame\obj\Debug\netcoreapp3.1\ConsoleAppWhoseHistGame.pdb
+C:\Users\afami\source\repos\ConsoleAppWhoseHistGame\obj\Debug\netcoreapp3.1\ConsoleAppWhoseHistGame.genruntimeconfig.cache
