@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repos\\ConsoleAppWhoseHistGame\\ConsoleAppWhoseHistGame.csproj",
+      "projectUniqueName": "C:\\Repos\\project-portfolio\\ConsoleAppWhoseHistGame\\ConsoleAppWhoseHistGame.csproj",
       "projectName": "ConsoleAppWhoseHistGame",
-      "projectPath": "C:\\Repos\\ConsoleAppWhoseHistGame\\ConsoleAppWhoseHistGame.csproj",
+      "projectPath": "C:\\Repos\\project-portfolio\\ConsoleAppWhoseHistGame\\ConsoleAppWhoseHistGame.csproj",
       "packagesPath": "C:\\Users\\afami\\.nuget\\packages\\",
-      "outputPath": "C:\\Repos\\ConsoleAppWhoseHistGame\\obj\\",
+      "outputPath": "C:\\Repos\\project-portfolio\\ConsoleAppWhoseHistGame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
