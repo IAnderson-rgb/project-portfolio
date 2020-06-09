@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uGy6oep5cXLIHedlcNZw3+F8ojHZFOuULyjkbdbHoyRLx455Kv7toFy5OuoAAedSDf1oWIDApATGqS/1l/8QTw==",
+  "dgSpecHash": "vC+KCML48Ui5uVmVnBGtKoGUjQ9tbttckaZBB2gXvd1JD9BBzSo3U9GXw2VHUP0jtu4mAev0YsMqHbKoHVApog==",
   "success": true,
   "projectFilePath": "C:\\Repos\\project-portfolio\\ConsoleAppWhoseHistGame\\ConsoleAppWhoseHistGame.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\afami\\.nuget\\packages\\mstest.testframework\\2.1.2\\mstest.testframework.2.1.2.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppWhoseHistGame", "ConsoleAppWhoseHistGame.csproj", "{A888884B-B241-4140-88AE-6DCA5898B523}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppWhoseHistGame", "ConsoleAppWhoseHistGame.csproj", "{A888884B-B241-4140-88AE-6DCA5898B523}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhoseHistTests", "WhoseHistTests\WhoseHistTests.csproj", "{022D910C-552D-42E1-B4FE-5BFD5F49B44D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A888884B-B241-4140-88AE-6DCA5898B523}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A888884B-B241-4140-88AE-6DCA5898B523}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A888884B-B241-4140-88AE-6DCA5898B523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{022D910C-552D-42E1-B4FE-5BFD5F49B44D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{022D910C-552D-42E1-B4FE-5BFD5F49B44D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{022D910C-552D-42E1-B4FE-5BFD5F49B44D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{022D910C-552D-42E1-B4FE-5BFD5F49B44D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
