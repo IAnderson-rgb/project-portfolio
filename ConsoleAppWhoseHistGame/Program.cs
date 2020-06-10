@@ -57,7 +57,7 @@ namespace ConsoleAppWhoseHistGame
                         Console.WriteLine();
 
                         Game newgame = new Game(seconds, isNewgame, playerName);
-                        List<Results> answer = new List<Results>();
+                        //List<Results> answer = new List<Results>();
                         Console.WriteLine("Hello " + ((playerName == "") ? $"{playAsGuest}!" : $"{newgame.PlayerName}!"));
                         Console.WriteLine("Are You Ready to Play!: Yes/No");
                         isUserwrong = true;
@@ -83,7 +83,8 @@ namespace ConsoleAppWhoseHistGame
                                     Console.WriteLine();
                                     Console.Clear();
                                     newgame.PlayGame(selectedDate);
-
+                                    
+                                    //Build additional game functionality here.
                                 }
                             }
                         }
