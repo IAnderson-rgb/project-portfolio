@@ -15,14 +15,14 @@ namespace ConsoleAppWhoseHistGame
             index game = new index();
             Console.WindowWidth = 160;
             Console.WriteLine("\n\n");
-            Console.WriteLine("                                                                 Press Any Key To Start"); //Empty space to center text.
+            Console.WriteLine("                                                                 Press Any Key To Start"); //Empty space to center text.Need to add formatting.
             Console.WriteLine();
             foreach (string line in game.Title)
-                Console.WriteLine("                                            " + line); //Empty space to center text.
+                Console.WriteLine("                                            " + line); //Empty space to center text.Need to add formatting.
             Console.ReadKey();
 
             Console.WriteLine();
-            Console.WriteLine("                                                               " + game.Rules); //Empty space to center text.
+            Console.WriteLine("                                                               " + game.Rules); //Empty space to center text.Need to add formatting.
             Console.WriteLine();
             bool keepGameRunning = true;
             while (keepGameRunning)
