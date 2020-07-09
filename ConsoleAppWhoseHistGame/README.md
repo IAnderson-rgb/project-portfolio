@@ -4,9 +4,4 @@ This is a  console application for those who are extremely interested in word ga
 
                                                                               ............Under Construction...........        
 
-<img
-src=“images/WordGames.png”
-raw=true
-alt=“Word Games”
-style=“margin-right: 10px;”
-/>
+![Screenshot](images/WordGames.png)
