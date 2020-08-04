@@ -84,7 +84,7 @@ namespace ConsoleAppWhoseHistGame
                                     Console.Clear();
                                     newgame.PlayGame(selectedDate);
                                     string[] arrAnswers = newgame.Answers.ToArray();
-                                    string[] arrGuesses = newgame.PlayerGeusses.ToArray();
+                                    string[] arrGuesses = newgame.PlayerGuesses.ToArray();
                                     Results answers = new Results(arrAnswers, arrGuesses);
                                     answers.GetPlayerResults();
                                     //Build additional game functionality here.

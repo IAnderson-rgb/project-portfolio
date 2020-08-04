@@ -10,7 +10,7 @@ namespace ConsoleAppWhoseHistGame.Classes
         public string[] Correct { get; private set; }
         public string[] Wrong { get; private set; }
         public List<string> Answers { get; private set; }
-        public List<string> PlayerGeusses { get; private set; }
+        public List<string> PlayerGuesses { get; private set; }
 
         public Results(string[] arrAnswers, string[] arrGuesses)
         {
@@ -31,7 +31,7 @@ namespace ConsoleAppWhoseHistGame.Classes
             Correct = correct;
             Wrong = wrong;
             this.Answers = arrAnswers.ToList();
-            this.PlayerGeusses = arrGuesses.ToList();
+            this.PlayerGuesses = arrGuesses.ToList();
         }
 
         public string[] GetPlayerResults()
@@ -42,7 +42,7 @@ namespace ConsoleAppWhoseHistGame.Classes
             {
                 ansResult = line.ToString();
             }
-            foreach (string line in PlayerGeusses)
+            foreach (string line in PlayerGuesses)
             {
                 guessResult = line.ToString();
             }
