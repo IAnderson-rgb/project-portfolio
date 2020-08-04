@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ConsoleAppWhoseHistGame.Models;
 
 namespace ConsoleAppWhoseHistGame.Classes
 {
@@ -9,10 +10,9 @@ namespace ConsoleAppWhoseHistGame.Classes
     {
         public string[] Correct { get; private set; }
         public string[] Wrong { get; private set; }
-        public List<string> Answers { get; private set; }
-        public List<string> PlayerGeusses { get; private set; }
+        private Game User { get; set; }
 
-        public Results(string[] arrAnswers, string[] arrGuesses)
+        public Results(PlayGame game)
         {
             var correct = new[]
             {
@@ -30,19 +30,18 @@ namespace ConsoleAppWhoseHistGame.Classes
 
             Correct = correct;
             Wrong = wrong;
-            this.Answers = arrAnswers.ToList();
-            this.PlayerGeusses = arrGuesses.ToList();
+            User = game.User;
         }
 
         public string[] GetPlayerResults()
         {
             string ansResult = "";
             string guessResult = "";
-            foreach (string line in Answers) 
+            foreach (string line in User.Answers) 
             {
                 ansResult = line.ToString();
             }
-            foreach (string line in PlayerGeusses)
+            foreach (string line in User.PlayerGuesses)
             {
                 guessResult = line.ToString();
             }

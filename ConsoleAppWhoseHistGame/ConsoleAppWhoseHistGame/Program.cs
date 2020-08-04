@@ -4,11 +4,13 @@ using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
 using ConsoleAppWhoseHistGame.Classes;
+using ConsoleAppWhoseHistGame.Models;
+
 namespace ConsoleAppWhoseHistGame
 {
     class Program
     {/// <summary>
-     /// Game starts by getting the title and rules from index object if user chooses yes.
+     /// User starts by getting the title and rules from index object if user chooses yes.
      /// </summary>
         static void Main()
         {
@@ -56,9 +58,9 @@ namespace ConsoleAppWhoseHistGame
                         string playerName = Console.ReadLine();
                         Console.WriteLine();
 
-                        Game newgame = new Game(seconds, isNewgame, playerName);
+                        PlayGame newgame = new PlayGame(seconds, isNewgame, playerName);
                         //List<Results> answer = new List<Results>();
-                        Console.WriteLine("Hello " + ((playerName == "") ? $"{playAsGuest}!" : $"{newgame.PlayerName}!"));
+                        Console.WriteLine("Hello " + ((newgame.UserName == "") ? $"{playAsGuest}!" : $"{newgame.UserName}!"));
                         Console.WriteLine("Are You Ready to Play!: Yes/No");
                         isUserwrong = true;
                         while (isUserwrong)
@@ -82,10 +84,8 @@ namespace ConsoleAppWhoseHistGame
                                     Console.WriteLine("Your input is " + ((selectedDate.Contains("5-14") || selectedDate.Contains("5-15") || selectedDate.Contains("5-16")) ? "valid!" : "not valid. Please enter a valid response: 5-14 | 5-15 | 5-16"));
                                     Console.WriteLine();
                                     Console.Clear();
-                                    newgame.PlayGame(selectedDate);
-                                    string[] arrAnswers = newgame.Answers.ToArray();
-                                    string[] arrGuesses = newgame.PlayerGeusses.ToArray();
-                                    Results answers = new Results(arrAnswers, arrGuesses);
+                                    newgame.Run(selectedDate);
+                                    Results answers = new Results(newgame);
                                     answers.GetPlayerResults();
                                     //Build additional game functionality here.
                                 }
@@ -97,6 +97,8 @@ namespace ConsoleAppWhoseHistGame
                         Console.WriteLine();
                         Console.WriteLine("We're so sorry and wish you could play! :( ");
                         Console.WriteLine("HAVE A NICE DAY!");
+                        //if(keepGameRunning == true) //exit
+                        //else PlayGame.Run(_Game);
                     }
 
 
