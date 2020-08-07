@@ -31,11 +31,11 @@ namespace ConsoleAppWhoseHistGame.Classes
 
         /// <summary>
         /// List populated with answers. Contains the Original order of text minus the year the event took place.
-        /// List populated with player's geuss for each scrambled word problem.
+        /// List populated with player's guess for each scrambled word problem.
         /// </summary>
 
         /// <summary>
-        /// Gives the date the user chosses to play. Reads in historical data from a txt file based on the date givin. Reverses the order of the word in the txt file. Creates an answers list of the original word order.
+        /// Gives the date the user choses to play. Reads in historical data from a txt file based on the date given. Reverses the order of the word in the txt file. Creates an answers list of the original word order.
         /// </summary>
         /// <param name="selectedDate">Date chosen by the user eg..5-14 </param>
         public void Run(string selectedDate)
