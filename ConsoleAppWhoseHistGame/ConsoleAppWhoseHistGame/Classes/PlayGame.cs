@@ -13,7 +13,7 @@ namespace ConsoleAppWhoseHistGame.Classes
 {
     public class PlayGame
     {
-        public Game User { get; set; }
+        public Game User = new Game();
         public string UserName { get; set; }
         /// <summary>
         /// Creates a new User by setting player info and time to play.

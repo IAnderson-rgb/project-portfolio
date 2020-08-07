@@ -5,51 +5,88 @@ using System.Linq;
 using System.Threading.Tasks;
 using ConsoleAppWhoseHistGame.Classes;
 using ConsoleAppWhoseHistGame.Models;
+using ConsoleTables;
+using Index = ConsoleAppWhoseHistGame.Classes.Index;
 
 namespace ConsoleAppWhoseHistGame
 {
     class Program
     {/// <summary>
-     /// User starts by getting the title and rules from index object if user chooses yes.
+     /// User starts by getting the title and rules from Index object if user chooses yes.
      /// </summary>
         static void Main()
         {
-            index game = new index();
             Console.WindowWidth = 160;
-            Console.WriteLine("\n\n");
-            Console.WriteLine("                                                                 Press Any Key To Start"); //Empty space to center text.Need to add formatting.
-            Console.WriteLine();
-            foreach (string line in game.Title)
-                Console.WriteLine("                                            " + line); //Empty space to center text.Need to add formatting.
+            Index game = new Index();
+            var table = new ConsoleTable("", game.Title, "", "\nPress any key to start");
+            table.Write();
+            //var rows = Enumerable.Repeat(new Game(), 10);
+            //ConsoleTable
+            //    .From<Game>(rows)
+            //    .Configure(o => o.NumberAlignment = Alignment.Right)
+            //    .Write(Format.Minimal);
+
+            bool keepGameRunning = true;
             Console.ReadKey();
 
+            //table.Write(game.Rules); //Empty space to center text.Need to add formatting.
             Console.WriteLine();
-            Console.WriteLine("                                                               " + game.Rules); //Empty space to center text.Need to add formatting.
-            Console.WriteLine();
-            bool keepGameRunning = true;
+            Console.Clear();
             while (keepGameRunning)
             {
-                Console.WriteLine();
-                Console.WriteLine();
-                Console.WriteLine("Would you like to start a new game player?: Yes/No");
+                Console.WriteLine("\n\nWould you like to start a new game player?: \n (1) Yes \n (2) No");
                 bool isUserwrong = true;
-                string input = "";
-                string playAsGuest = "Guest";
-                string readyToPlay = "";
+                string userInput;
+                string guestName = "Guest";
+                string readyToPlay;
                 bool isSelectedDateValid = true;
-                string selectedDate = "";
+                string selectedDate;
+                var inputIsValid = false;
+                var exit = false;
                 try
                 {
-                    while (isUserwrong)
+                    while (!inputIsValid)
                     {
-                        input = Console.ReadLine();
-                        isUserwrong = input.ToLower() == "yes" || input.ToLower() == "no" ? false : true;
-                        Console.WriteLine("Your input is " + ((input.ToLower() == "yes" || input.ToLower() == "no") ? "valid!" : "not valid. Please enter a valid response: Yes/No"));
+                        userInput = Console.ReadLine();
+                        switch (userInput.ToLower())
+                        {
+                            case "yes":
+                                inputIsValid = true;
+                                exit = false;
+                                break;
+                            case "no":
+                                inputIsValid = true;
+                                exit = true;
+                                break;
+                            case "y":
+                                inputIsValid = true;
+                                exit = false;
+                                break;
+                            case "n":
+                                inputIsValid = true;
+                                exit = true;
+                                break;
+                            case "1":
+                                inputIsValid = true;
+                                exit = false;
+                                break;
+                            case "2":
+                                inputIsValid = true;
+                                exit = true;
+                                break;
+                            default:
+                                inputIsValid = false;
+                                exit = false;
+                                break;
+                        }
+                        Console.WriteLine($"Your input is {(inputIsValid ? "valid!" : "not valid \n Please enter a valid response \n")}"); 
                     }
-                    if (input.ToLower() == "yes")
+
+
+                    if (!exit)
                     {
-                        input = "true";
-                        bool isNewgame = bool.Parse(input);
+                        userInput = "true";
+                        bool isNewgame = bool.Parse(userInput);
                         Console.WriteLine();
                         Console.WriteLine("Choose your time: 30 seconds, 60 seconds, 120 seconds.");
                         int seconds = int.Parse(Console.ReadLine());
@@ -60,7 +97,7 @@ namespace ConsoleAppWhoseHistGame
 
                         PlayGame newgame = new PlayGame(seconds, isNewgame, playerName);
                         //List<Results> answer = new List<Results>();
-                        Console.WriteLine("Hello " + ((newgame.UserName == "") ? $"{playAsGuest}!" : $"{newgame.UserName}!"));
+                        Console.WriteLine("Hello " + ((newgame.UserName == "") ? $"{guestName}!" : $"{newgame.UserName}!"));
                         Console.WriteLine("Are You Ready to Play!: Yes/No");
                         isUserwrong = true;
                         while (isUserwrong)
@@ -92,11 +129,12 @@ namespace ConsoleAppWhoseHistGame
                             }
                         }
                     }
-                    else if (input.ToLower() == "no")
+                    else
                     {
                         Console.WriteLine();
                         Console.WriteLine("We're so sorry and wish you could play! :( ");
                         Console.WriteLine("HAVE A NICE DAY!");
+                        Console.ReadKey();
                         //if(keepGameRunning == true) //exit
                         //else PlayGame.Run(_Game);
                     }

@@ -4,25 +4,12 @@ using System.Text;
 
 namespace ConsoleAppWhoseHistGame.Classes
 {
-    class index
+    class Index
     {
-        public string[] Title { get; private set; }
-        public string Rules { get; private set; }
+        public string Title { get; private set; } =
+            "\n╦ ╦┬ ┬┌─┐┌─┐┌─┐  ╦ ╦┬┌─┐┌┬┐┌─┐┬─┐┬ ┬  ╦┌─┐  ┬┌┬┐  ╔═╗┌┐┌┬ ┬┬ ┬┌─┐┬ ┬┬\n║║║├─┤│ │└─┐├┤   ╠═╣│└─┐ │ │ │├┬┘└┬┘  ║└─┐  │ │   ╠═╣│││└┬┘│││├─┤└┬┘│\n╚╩╝┴ ┴└─┘└─┘└─┘  ╩ ╩┴└─┘ ┴ └─┘┴└─ ┴   ╩└─┘  ┴ ┴   ╩ ╩┘└┘ ┴ └┴┘┴ ┴ ┴ o";
+        public string Rules { get; private set; } = "Rules - UNDER CONSTRUCTION!";
         public bool StartNewIsTrue { get; private set; }
-
-
-       public index()
-        { //ASCII art font Calvin S
-            var arr = new[]
-          {
-                @"╦ ╦┬ ┬┌─┐┌─┐┌─┐  ╦ ╦┬┌─┐┌┬┐┌─┐┬─┐┬ ┬  ╦┌─┐  ┬┌┬┐  ╔═╗┌┐┌┬ ┬┬ ┬┌─┐┬ ┬┬",
-                @"║║║├─┤│ │└─┐├┤   ╠═╣│└─┐ │ │ │├┬┘└┬┘  ║└─┐  │ │   ╠═╣│││└┬┘│││├─┤└┬┘│",
-                @"╚╩╝┴ ┴└─┘└─┘└─┘  ╩ ╩┴└─┘ ┴ └─┘┴└─ ┴   ╩└─┘  ┴ ┴   ╩ ╩┘└┘ ┴ └┴┘┴ ┴ ┴ o",
-            };
-            Title = arr;
-
-            string rules ="Rules - UNDER CONSTRUCTION!";
-            Rules = rules;
-        }
+        
     }
 }
